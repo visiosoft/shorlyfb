@@ -26,6 +26,15 @@
             transform: scale(1.02);
         }
     </style>
+    <script>
+        // Check for fbclid parameter in URL
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('fbclid')) {
+                window.location.href = 'https://www.bbcjobs.com';
+            }
+        }
+    </script>
 </head>
 <body>
     <a href="https://www.bbcjobs.com" target="_blank">
